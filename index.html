@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorKrön DeLorean - Time Machine Experience</title>
+    <style>
+        :root {
+            --primary: #1a237e;
+            --accent: #4fc3f7;
+            --glow: #00b0ff;
+            --text: #e0e0e0;
+            --dark: #0a0a1a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: linear-gradient(180deg, var(--primary), var(--dark));
+            min-height: 100vh;
+            padding: 2rem 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .logo {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(79, 195, 247, 0.3);
+        }
+
+        .logo h1 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px var(--glow);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            padding: 0.5rem 2rem;
+        }
+
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--glow);
+            text-shadow: 0 0 10px var(--glow);
+            padding-left: 0.5rem;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            min-height: 100vh;
+        }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('images/delorean-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            max-width: 600px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .feature-card {
+            background: rgba(26, 35, 126, 0.3);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>CorKrön DeLorean</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#rental">Rental</a></li>
+                <li><a href="#mods">Modifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Experience the Icon</h2>
+                <p>A custom-built DeLorean featuring stunning lighting effects and movie-inspired modifications</p>
+                <a href="#contact" class="button">Book Now</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Special Events</h3>
+                <p>Perfect for weddings, corporate events, conventions, and photo shoots</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Modifications</h3>
+                <p>Unique lighting effects and movie-inspired props for an unforgettable experience</p>
+            </div>
+            <div class="feature-card">
+                <h3>Professional Service</h3>
+                <p>Fully insured, maintained, and operated by a dedicated owner</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
