@@ -108,15 +108,60 @@
             padding: 2rem;
         }
 
-        .button {
+        .book-now {
             display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--accent);
-            color: var(--dark);
+            padding: 1.25rem 3rem;
+            background: linear-gradient(45deg, #00ff87, #60efff);
+            color: #000;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 50px;
             font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: all 0.3s;
+            margin-top: 2rem;
+            box-shadow: 0 0 20px rgba(96, 239, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-now:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 0 30px rgba(96, 239, 255, 0.8);
+        }
+
+        .book-now:active {
+            transform: scale(0.98);
+        }
+
+        .book-now::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+
+        .book-now:hover::after {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         @media (max-width: 768px) {
@@ -159,7 +204,9 @@
             <div class="hero-content">
                 <h2>Experience the Icon</h2>
                 <p>A custom-built DeLorean featuring stunning lighting effects and movie-inspired modifications</p>
-                <a href="#contact" class="button">Book Now</a>
+                <div class="floating">
+                    <a href="#rental" class="book-now">Book Now</a>
+                </div>
             </div>
         </div>
 
